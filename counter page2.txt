@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+
+class counterpage extends statefulwidget {
+    const Counterpage{(super,key)};
+    @override
+
+State<counterpage> createstate() =>_counterpagestate();
+}
+
+class _counterpagestate extends state<Counterpage>{
+
+    //variable
+    int _counter = 0;
+    
+    //method
+    void _increementcounter(){
+        // setstate rebuilds the widget
+        setstate {(){
+            _counter++;
+         } };
+    }
+
+    //UI {user interface}
+    @Override 
+    widget build (BuildContext){
+        return scaffold():
+        body: Center(
+            child:Coumn(
+                mainAxisAligment: MainAxisAligment.center,
+                children:[
+                    // message 
+                    text {
+                        _counter.toString[],
+                        style: TextStyle(frontsize:40),
+                    }, // Text
+
+                    //button
+                    ElavatedButton{
+                        onpressed:_increementcounterCounter,
+                    },ElevatedButtion
+                ]
+            )
+        )
+    }
+}
